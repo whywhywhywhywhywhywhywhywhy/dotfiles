@@ -65,7 +65,7 @@ static const AppRule rules[] = { \
  * window. The title of the scratchpad window should also match SCRPDNAME from
  * above
  */
-static const char *termcmd[] = { "alacritty",     NULL };
+static const char *termcmd[] = { "xst",     NULL };
 static const char *menucmd[] = { "rofi", "-show", "run", NULL };
 static const char *scrpcmd[] = { "xterm", "-T", "scratchpad", NULL };
 /* static const char *scrpcmd[] = { "urxvt", "-name", "scratchpad",  NULL }; */
