@@ -7,36 +7,34 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
- set $menu bemenu-run 
+ set $menu sirula
  # set browser
  set $webbrowser firefox
 # gaps 
 gaps inner 10
 gaps outer 15 
 # remove titlebar 
-default_border  pixel 3 
+default_border none  
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/alex/Downloads/tivmidyb5sr61.png fill
+output * bg /home/alex/dotfiles/tivmidyb5sr61.png fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
 #
@@ -51,21 +49,12 @@ output * bg /home/alex/Downloads/tivmidyb5sr61.png fill
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 # change volume 
-bindsym $mod+Shift+i   exec pamixer -i 1
-bindsym $mod+Shift+d   exec pamixer -d 1 
+bindsym $mod+Shift+i   exec pamixer -i 10
+bindsym $mod+Shift+d   exec pamixer -d 10
 
 ### Input configuration
 #
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
+ #You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
 ### Key bindings
@@ -76,12 +65,12 @@ bindsym $mod+Shift+d   exec pamixer -d 1
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+Shift+c kill
     
     # Start your launcher
-    bindsym $mod+d exec $menu
+    bindsym $mod+p exec $menu
     # start webbrowser
-    bindsym $mod+Shift+f exec $webbrowser
+    bindsym $mod+Shift+t exec $webbrowser
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -90,7 +79,7 @@ bindsym $mod+Shift+d   exec pamixer -d 1
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+q reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
@@ -216,5 +205,6 @@ bar {
     swaybar_command waybar
 }
 include /etc/sway/config.d/*
-
-exec pipewire
+exec pipewire 
+exec pipewire-pulse
+exec gammastep
