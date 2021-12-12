@@ -55,8 +55,8 @@ font-2 = Iosevka Nerd Font:pixelsize=10:antialias=true;1
 font-3 = MaterialIcons:size=10;0
 font-4 = Termsynu:size=8:antialias=false;-2
 
-modules-left =  wireless-network cpu
-modules-center = alsa
+modules-left = bspwm  
+modules-center = wireless-network pulseaudio
 modules-right =   battery date    
 
 tray-position = right
@@ -96,6 +96,8 @@ label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
 label-indicator-underline = ${colors.secondary}
+
+
 
 [module/volume]
 type = internal/volume

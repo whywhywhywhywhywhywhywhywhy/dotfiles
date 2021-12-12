@@ -1,0 +1,98 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+alt + Return
+	alacritty
+
+
+# program launcher
+alt + p
+	rofi -show run 
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+alt + k
+	slock
+
+# increase volume
+alt + shift + i 
+    pamixer -i 10
+
+# decrease volume 
+alt + shift + d 
+    pamixer -d 10
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+alt  + shift + {X,x}
+	bspc {quit,wm -r}
+
+# close and kill
+alt + {_,shift + }c
+	bspc node -{c,k}
+
+#
+# state/flags
+#
+
+# set the window state
+alt + {i,shift + I,f,s}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+alt + {_,shift + }{d,g,e,a}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus or send to the given desktop
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+alt + {_,shift + }{l,h,v,r,n,t,j,b,m,q}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+alt + ctrl + {d,g,e,a}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+alt + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+alt + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+alt + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+alt + shift + {d,g,e,a}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+alt + super + shift + {g,d,e,a}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+alt + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
