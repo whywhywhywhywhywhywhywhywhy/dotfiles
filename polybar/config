@@ -56,8 +56,8 @@ font-3 = MaterialIcons:size=10;0
 font-4 = Termsynu:size=8:antialias=false;-2
 
 modules-left = bspwm  
-modules-center = wireless-network pulseaudio
-modules-right =   battery date    
+modules-center =  alsa
+modules-right =   battery date   
 
 tray-position = right
 tray-padding = 0
