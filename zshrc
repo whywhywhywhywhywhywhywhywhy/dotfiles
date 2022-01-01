@@ -38,6 +38,7 @@ export EDITOR=micro
 export BROWSER=firefox 
 export MOZ_ENABLE_WAYLAND=1
 export TERMINAL=foot
+source ~/zsh-abbr/zsh-abbr.zsh
 source  /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
