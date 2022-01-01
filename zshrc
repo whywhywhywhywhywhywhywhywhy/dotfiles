@@ -7,8 +7,8 @@
 
 
 # History in cache directory:
-HISTSIZE=10000000
-SAVEHIST=10000000
+HISTSIZE=100000000
+SAVEHIST=100000000
 HISTFILE=~/.cache/zsh/history
 
 
