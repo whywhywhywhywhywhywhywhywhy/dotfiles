@@ -4,8 +4,7 @@
 [[ $- != *i* ]] && return
 
 [[ $- == *i* ]] && source ~/ble.sh/out/ble.sh --noattach
-# Normal settings can be placed in between.
-# Use bash-completion, if available
+# actual bash configuration starts here 
 eval "$(starship init bash)"
 alias ls='ls --color=auto'
 alias ls='ls --color=auto'
