@@ -22,7 +22,7 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# aliases,variables and plugin setup
+# aliases
 alias ls='ls --color=auto'
 alias reb='doas reboot'
 alias shut='doas poweroff'
@@ -30,7 +30,7 @@ alias xu='doas xbps-install -Su'
 alias nnn='nnn -de'
 alias way='dbus-launch --exit-with-session sway'
 alias x='sx sh .xinitrc'
-
+alias play='openmpt123'
 #setting path
 export PATH=/home/alex/.local/bin/:$PATH
 export PATH=/usr/local/bin:$PATH
