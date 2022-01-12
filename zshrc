@@ -40,6 +40,7 @@ export EDITOR=micro
 export BROWSER=firefox 
 export MOZ_ENABLE_WAYLAND=1
 export TERMINAL=foot
+export TZ=America/Toronto
 # zsh plugins and configuration of those plugins 
 source ~/zsh-abbr/zsh-abbr.zsh
 source  /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
