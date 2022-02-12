@@ -31,7 +31,8 @@ alias nnn='nnn -de'
 alias way='dbus-launch --exit-with-session sway'
 alias x='sx sh .xinitrc'
 alias play='openmpt123'
-#setting path
+alias up='doas vpm update ; paru -Syu'
+# setting path
 export PATH=/home/alex/.local/bin/:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/home/alex/.cargo/bin:$PATH
