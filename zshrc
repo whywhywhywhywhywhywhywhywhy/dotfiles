@@ -31,7 +31,7 @@ alias nnn='nnn -de'
 alias way='dbus-launch --exit-with-session sway'
 alias x='sx sh .xinitrc'
 alias play='openmpt123'
-alias up='doas vpm update ; paru -Syu'
+alias up='doas vpm update ; paru -Syu ; doas emerge --ask --verbose --update --deep --newuse @world ; doas emerge --depclean '
 # setting path
 export PATH=/home/alex/.local/bin/:$PATH
 export PATH=/usr/local/bin:$PATH
@@ -42,6 +42,8 @@ export BROWSER=firefox
 export MOZ_ENABLE_WAYLAND=1
 export TERMINAL=foot
 export TZ=America/Toronto
+export XDG_CURRENT_DESKTOP=sway
+
 # zsh plugins and configuration of those plugins 
 source ~/zsh-abbr/zsh-abbr.zsh
 source  /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
